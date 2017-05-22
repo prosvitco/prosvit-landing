@@ -1,5 +1,24 @@
 <?php 
 
+// BOF of Helpers
+
+function var_exists( $data ) {
+    if ( !isset( $data ) ) {
+        return false;
+    }
+
+    if ( is_null( $data ) ) {
+        return false;
+    }
+
+    if ( $data == '' ) {
+        return false;
+    }
+    return true;
+}
+
+// EOF of Helpers
+
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
